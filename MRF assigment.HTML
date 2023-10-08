@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customerdetails</title>
+</head>
+<body>
+    <script>
+        // Sample data - array of customer objects
+const customers = [
+  { customerID: 1, customerName: "Alice", totalBillingAmount: 2500 },
+  { customerID: 2, customerName: "Bob", totalBillingAmount: 3500 },
+  { customerID: 3, customerName: "Charlie", totalBillingAmount: 4000 },
+  { customerID: 4, customerName: "David", totalBillingAmount: 2800 },
+];
+
+// Filter customers with totalBillingAmount more than Rs. 3000
+const filteredCustomers = customers.filter(customer => customer.totalBillingAmount > 3000);
+
+// Map and print customer names along with their purchase details
+filteredCustomers.map(customer => {
+  const { customerName, totalBillingAmount } = customer;
+  console.log(`Customer Name: ${customerName}`);
+  console.log(`Total Billing Amount: Rs. ${totalBillingAmount}`);
+  console.log("------------");
+});
+
+// Alternatively, you can use the reduce method to print customer names and total purchase details.
+// const result = filteredCustomers.reduce((acc, customer) => {
+//   const { customerName, totalBillingAmount } = customer;
+//   return `${acc}Customer Name: ${customerName}\nTotal Billing Amount: Rs. ${totalBillingAmount}\n------------\n`;
+// }, '');
+
+// console.log(result);
+
+    </script>
+</body>
+</html>
